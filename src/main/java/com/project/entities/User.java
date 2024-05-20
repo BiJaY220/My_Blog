@@ -8,7 +8,7 @@ public class User {
 	private String email;
 	private String password;
 	private String gender;
-	private String details;
+	private String detail;
 	private Timestamp dateTimestamp;
 	private String profileString;
 	public int getId() {
@@ -42,10 +42,10 @@ public class User {
 		this.gender = gender;
 	}
 	public String getDetails() {
-		return details;
+		return detail;
 	}
 	public void setDetails(String details) {
-		this.details = details;
+		this.detail = details;
 	}
 	public Timestamp getDateTimestamp() {
 		return dateTimestamp;
@@ -67,7 +67,7 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.gender = gender;
-		this.details = details;
+		this.detail = details;
 		this.dateTimestamp = dateTimestamp;
 		this.profileString = profileString;
 	}
@@ -75,21 +75,21 @@ public class User {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String name, String passwordString, String emailString, String genderString, String profileString2,
+	public User(String name, String passwordString, String emailString, String genderString,
 			String detailString) {
 		this.nameString=name;
 		this.password=passwordString;
 		this.email=emailString;
 		this.gender=genderString;
-		this.details=detailString;
-		this.profileString=profileString2;
+		this.detail=detailString;
+		
 		
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", nameString=" + nameString + ", email=" + email + ", password=" + password
-				+ ", gender=" + gender + ", details=" + details + ", dateTimestamp=" + dateTimestamp
+				+ ", gender=" + gender + ", details=" + detail + ", dateTimestamp=" + dateTimestamp
 				+ ", profileString=" + profileString + "]";
 	}
 	

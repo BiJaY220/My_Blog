@@ -61,9 +61,9 @@ public class UserDao {
 				user2.setNameString(set.getString("name"));
 				user2.setPassword(set.getString("password"));
 				user2.setEmail(set.getString("email"));
-				user2.setDetails(set.getString("details"));
+				user2.setDetails(set.getString("detail"));
 				user2.setProfileString(set.getString("profile"));
-				user2.setDateTimestamp(set.getTimestamp("date"));
+				user2.setDateTimestamp(set.getTimestamp("datetime"));
 				user2.setGender(set.getString("gender"));
 				
 				

@@ -10,10 +10,12 @@ import com.project.dao.UserDao;
 import com.project.entities.User;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@MultipartConfig
 public class RegisterServlet extends HttpServlet{
 
 	@Override
@@ -34,10 +36,10 @@ public class RegisterServlet extends HttpServlet{
 		String passwordString = req.getParameter("user_password");
 		String genderString = req.getParameter("gender");
 		String detailString = req.getParameter("details");
-		String profileString = req.getParameter("profile");
+
 		
+		User user = new User(name, passwordString,emailString,detailString,genderString);
 		UserDao databaseDao = new UserDao(DatabaseConnection.connector());
-		User user = new User(name, passwordString,emailString,genderString,profileString,detailString);
 		// pass the user to the database 
 		
 		

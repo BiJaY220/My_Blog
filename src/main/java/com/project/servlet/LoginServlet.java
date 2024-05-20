@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet{
 		}else {
 			// login success -> cookie and set the cookie
 			HttpSession session = req.getSession();
-			session.setAttribute("currentUser", session);
+			session.setAttribute("currentUser", ur);
 			resp.sendRedirect("Index.jsp");
 			
 			
